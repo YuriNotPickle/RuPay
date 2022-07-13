@@ -47,6 +47,11 @@ input {
   border-radius: 0;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 header {
   background-image: url(/img/Top_panel_bg.png);
   filter: drop-shadow(0px 8px 4px rgba(0, 0, 0, 0.25));
@@ -111,7 +116,7 @@ main .card {
   display: flex;
   flex-direction: column;
   width: 30%;
-  margin-bottom: -110px;
+  margin-bottom: -20px;
   transition: 0.2s;
 }
 main .card:hover {
