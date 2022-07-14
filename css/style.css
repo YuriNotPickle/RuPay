@@ -128,7 +128,7 @@ header .container__menu-spots_paragraph {
 .menu-wrap .mob-menu-cont {
   display: flex;
   justify-content: space-between;
-  background: url("/img/Top_panel_bg.png");
+  background: url(/img/Top_panel_bg.png);
   align-items: center;
 }
 .menu-wrap .mob-menu-cont .logo img {
