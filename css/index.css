@@ -408,7 +408,7 @@ main .card__img {
 }
 
 footer {
-  background: url("..img/footer_bg.png") 0 0/cover no-repeat;
+  background: url("../img/footer_bg.png") 0 0/cover no-repeat;
 }
 footer .ft-container {
   display: flex;

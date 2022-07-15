@@ -289,7 +289,7 @@ main .container__info {
 }
 main .container__info_heading {
   text-align: center;
-  background: url("../img/footer_bg.png") 0 0/100% 100% no-repeat;
+  background: url(../img/footer_bg.png) 0 0/100% 100% no-repeat;
   width: 50%;
   padding: 20px;
 }
@@ -304,7 +304,7 @@ main .container__info_text_paragraph {
 }
 
 footer {
-  background: url("..img/footer_bg.png") 0 0/cover no-repeat;
+  background: url("../img/footer_bg.png") 0 0/cover no-repeat;
 }
 footer .ft-container {
   display: flex;
