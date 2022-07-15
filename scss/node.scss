@@ -1,0 +1,29 @@
+@import "_header";
+main {
+   margin-top: 90px;
+   .container {
+      display: flex;
+      align-items: center;
+      &__info {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         &_heading {
+            text-align: center;
+            background: url("../img/footer_bg.png") 0 0/100% 100% no-repeat;
+            width: 50%;
+            padding: 20px;
+         }
+         &_text {
+            display: flex;
+            justify-content: space-between;
+            &_paragraph {
+               background: url("../img/card_bg.png") 0 0/100% 100% no-repeat;
+               width: 32%;
+               padding: 20px;
+            }
+         }
+      }
+   }
+}
+@import "_footer";
