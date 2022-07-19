@@ -1,1 +1,72 @@
 @import "_nullstyle";
+
+header {
+   padding: 0 50px;
+  .logo {
+    height: 47px;
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    &__list {
+      display: flex;
+      flex-flow: row nowrap;
+      list-style: none;
+      &_li {
+        &_link {
+         text-decoration: none;
+          p {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 28px;
+            line-height: 34px;
+            color: #000000;
+            margin: 0 32px;
+            &::after {
+               content: '';
+               width: 0px;
+               height: 2px;
+               display: block;
+               background: #000000;
+               transition: 200ms;
+             }
+            &:hover::after {
+               width: 100%;
+            }
+          }
+          .active {
+            color: #2B60EB;
+            &::after {
+               content: '';
+               width: 0px;
+               height: 2px;
+               display: block;
+               background: #2B60EB;
+               transition: 200ms;
+             }
+            &:hover::after {
+               width: 100%;
+            }
+          }
+        }
+      }
+    }
+    &__buttons {
+      display: flex;
+      align-items: center;
+      &_btn {
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        &_container {
+         margin-left: 18px;
+
+        }
+      }
+    }
+  }
+}
