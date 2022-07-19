@@ -56,6 +56,10 @@ main {
           top: 265px;
           height: 200px;
           @media screen and (min-width: 1390px) {
+            left: 200px;
+            top: 200px;
+          }
+          @media screen and (min-width: 1635px) {
             display: none;
           }
         }
@@ -66,6 +70,9 @@ main {
           top: 230px;
           height: 200px;
           @media screen and (min-width: 1390px) {
+            left: 500px;
+          }
+          @media screen and (min-width: 1635px) {
             display: none;
           }
         }
@@ -75,6 +82,7 @@ main {
       align-self: flex-end;
       max-width: 710px;
       width: 40%;
+      margin-bottom: -10px;
     }
     @media screen and (max-width: 1240px) {
       flex-direction: column;
@@ -189,6 +197,9 @@ main {
             &_link {
                font-size: 16px;
             }
+         }
+         &__pic {
+            margin-bottom: 0;
          }
       }
     }
