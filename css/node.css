@@ -54,7 +54,7 @@ header {
   align-items: center;
 }
 header .logo {
-  height: 47px;
+  height: 40px;
 }
 header .nav-menu {
   display: flex;
@@ -72,8 +72,8 @@ header .nav-menu__list_li_link p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
-  font-size: 28px;
-  line-height: 34px;
+  font-size: 20px;
+  line-height: 1;
   color: #000000;
   margin: 0 32px;
 }

@@ -1,3 +1,141 @@
 @import "_header";
+body {
+  min-height: 100%;
+}
+.swiper {
+  width: 100%;
+  &-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  &-button-disabled {
+    display: none;
+  }
+  &-pagination-bullet-active {
+    color: #fff;
+    background: $blue;
+  }
+}
+.main {
+  display: flex;
+  margin: 70px 0;
+  &__text {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 0 0 170px;
+    &_top {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      &_heading {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 1.2;
+        color: #000000;
+        span {
+          color: $blue;
+        }
+      }
+      &_paragraph {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1.1;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        border-left: 3px solid #000000;
+        padding-left: 20px;
+      }
+    }
+    &_bottom {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      margin-left: 180px;
+      margin-top: 50px;
+      &_heading {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 59px;
+        color: #000000;
+        span {
+          color: $blue;
+        }
+      }
+      &_paragraph {
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 22px;
+        line-height: 27px;
+        display: flex;
+        align-items: center;
+        color: #000000;
+        border-left: 3px solid #000000;
+        padding-left: 20px;
+      }
+    }
+  }
+  &__img {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    &_container {
+      display: flex;
+      position: relative;
+      align-items: center;
+      transition: 200ms;
+      &:hover {
+        transform: scale(105%);
+      }
+      &_pic {
+        height: 400px;
+        z-index: 2;
+      }
+      &_svg-1 {
+        position: absolute;
+        z-index: 1;
+        left: 50px;
+        top: 15px;
+      }
+
+      &_svg-2 {
+        position: absolute;
+        top: 330px;
+        left: -70px;
+      }
+    }
+  }
+  &__dot-square {
+   position: absolute;
+
+  }
+  &__dot-circle {
+   position: absolute;
+   left: 95%;
+   top: 90%;
+  }
+  &__disc-right {
+   position: absolute;
+   left: 94%;
+   top: 70%;
+  }
+  &__disc-left {
+   position: absolute;
+   top: 60%;
+  }
+}
 
 @import "_footer";

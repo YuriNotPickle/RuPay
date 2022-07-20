@@ -1,9 +1,12 @@
 @import "_nullstyle";
-
+$blue: #2B60EB;
+$gray: #B9D7EA;
+$pink: #D6D9F2;
+$milky: #F7FBFC;
 header {
    padding: 0 50px;
   .logo {
-    height: 47px;
+    height: 40px;
   }
   display: flex;
   justify-content: space-between;
@@ -22,8 +25,8 @@ header {
             font-family: "Montserrat";
             font-style: normal;
             font-weight: 600;
-            font-size: 28px;
-            line-height: 34px;
+            font-size: 20px;
+            line-height: 1;
             color: #000000;
             margin: 0 32px;
             &::after {
@@ -39,13 +42,13 @@ header {
             }
           }
           .active {
-            color: #2B60EB;
+            color: $blue;
             &::after {
                content: '';
                width: 0px;
                height: 2px;
                display: block;
-               background: #2B60EB;
+               background: $blue;
                transition: 200ms;
              }
             &:hover::after {
