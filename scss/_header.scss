@@ -65,6 +65,24 @@ header {
         border: 0;
         background: transparent;
         cursor: pointer;
+        svg {
+         circle {
+            fill: #ffffff;
+            transition: 200ms;
+         }
+         path {
+            fill: black;
+            transition: 200ms;
+         }
+         &:hover {
+            circle {
+               fill: $blue;
+            }
+            path {
+               fill: white;
+            }
+         }
+        }
         &_container {
          margin-left: 18px;
 

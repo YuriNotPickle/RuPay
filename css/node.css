@@ -111,6 +111,20 @@ header .nav-menu__buttons_btn {
   background: transparent;
   cursor: pointer;
 }
+header .nav-menu__buttons_btn svg circle {
+  fill: #ffffff;
+  transition: 200ms;
+}
+header .nav-menu__buttons_btn svg path {
+  fill: black;
+  transition: 200ms;
+}
+header .nav-menu__buttons_btn svg:hover circle {
+  fill: #2B60EB;
+}
+header .nav-menu__buttons_btn svg:hover path {
+  fill: white;
+}
 header .nav-menu__buttons_btn_container {
   margin-left: 18px;
 }
