@@ -1,10 +1,10 @@
 @import "_nullstyle";
-$blue: #2B60EB;
-$gray: #B9D7EA;
-$pink: #D6D9F2;
-$milky: #F7FBFC;
+$blue: #2b60eb;
+$gray: #b9d7ea;
+$pink: #d6d9f2;
+$milky: #f7fbfc;
 header {
-   padding: 0 50px;
+  padding: 0 50px;
   .logo {
     height: 40px;
   }
@@ -20,7 +20,7 @@ header {
       list-style: none;
       &_li {
         &_link {
-         text-decoration: none;
+          text-decoration: none;
           p {
             font-family: "Montserrat";
             font-style: normal;
@@ -30,29 +30,29 @@ header {
             color: #000000;
             margin: 0 32px;
             &::after {
-               content: '';
-               width: 0px;
-               height: 2px;
-               display: block;
-               background: #000000;
-               transition: 200ms;
-             }
+              content: "";
+              width: 0px;
+              height: 2px;
+              display: block;
+              background: #000000;
+              transition: 200ms;
+            }
             &:hover::after {
-               width: 100%;
+              width: 100%;
             }
           }
           .active {
             color: $blue;
             &::after {
-               content: '';
-               width: 0px;
-               height: 2px;
-               display: block;
-               background: $blue;
-               transition: 200ms;
-             }
+              content: "";
+              width: 0px;
+              height: 2px;
+              display: block;
+              background: $blue;
+              transition: 200ms;
+            }
             &:hover::after {
-               width: 100%;
+              width: 100%;
             }
           }
         }
@@ -66,26 +66,33 @@ header {
         background: transparent;
         cursor: pointer;
         svg {
-         circle {
+          circle {
             fill: #ffffff;
             transition: 200ms;
-         }
-         path {
+          }
+          path {
             fill: black;
             transition: 200ms;
-         }
-         &:hover {
+          }
+          &:hover {
             circle {
-               fill: $blue;
+              fill: $blue;
             }
             path {
-               fill: white;
+              fill: white;
             }
-         }
+          }
         }
         &_container {
-         margin-left: 18px;
-
+          margin-left: 18px;
+          p {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 20px;
+            color: #000000;
+          }
         }
       }
     }

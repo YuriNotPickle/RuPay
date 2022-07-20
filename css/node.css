@@ -89,14 +89,14 @@ header .nav-menu__list_li_link p:hover::after {
   width: 100%;
 }
 header .nav-menu__list_li_link .active {
-  color: #2B60EB;
+  color: #2b60eb;
 }
 header .nav-menu__list_li_link .active::after {
   content: "";
   width: 0px;
   height: 2px;
   display: block;
-  background: #2B60EB;
+  background: #2b60eb;
   transition: 200ms;
 }
 header .nav-menu__list_li_link .active:hover::after {
@@ -120,13 +120,21 @@ header .nav-menu__buttons_btn svg path {
   transition: 200ms;
 }
 header .nav-menu__buttons_btn svg:hover circle {
-  fill: #2B60EB;
+  fill: #2b60eb;
 }
 header .nav-menu__buttons_btn svg:hover path {
   fill: white;
 }
 header .nav-menu__buttons_btn_container {
   margin-left: 18px;
+}
+header .nav-menu__buttons_btn_container p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 20px;
+  color: #000000;
 }
 
 footer {
