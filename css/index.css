@@ -127,18 +127,27 @@ header .nav-menu__buttons_btn svg:hover path {
 }
 header .nav-menu__buttons_btn_container {
   margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  margin-top: 4px;
 }
 header .nav-menu__buttons_btn_container p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 1;
   color: #000000;
 }
 
 body {
   min-height: 100%;
+  background: url(../img/Polygon_2.svg) 0px 0vh no-repeat, url(../img/Polygon_3.svg) 2vw 95% no-repeat, url(../img/Polygon_4.svg) 80vw 27vh no-repeat, url(../img/disc.svg) 0 50vh no-repeat, url(../img/dots.svg) 0 15vh no-repeat, url(../img/disc-right.svg) 94vw 70% no-repeat, url(../img/dots-circle.svg) 96vw 90% no-repeat;
+}
+
+main {
+  padding: 33px 0;
 }
 
 .swiper {
@@ -241,10 +250,6 @@ body {
 }
 .swiper-button-prev:hover::after {
   content: url("data:image/svg+xml,%3Csvg width='70' height='77' viewBox='0 0 70 77' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M44 4L11 38L43 71.5L49.5 70L52 65L26.5 38L52 11L49.5 6L44 4Z' fill='%232B60EB'/%3E%3Cpath d='M45.5404 73.3906C46.8864 73.3862 48.201 72.9838 49.3187 72.2339C50.4364 71.484 51.3073 70.4202 51.8218 69.1765C52.3363 67.9327 52.4714 66.5646 52.21 65.2442C51.9486 63.9239 51.3025 62.7104 50.3529 61.7564L27.1086 38.5L50.3529 15.2436C51.5599 13.9534 52.2181 12.2446 52.1887 10.4781C52.1592 8.7116 51.4444 7.0257 50.1951 5.77643C48.9458 4.52716 47.2599 3.81232 45.4934 3.78287C43.7269 3.75342 42.0182 4.41166 40.7279 5.61859L12.647 33.6875C11.3774 34.9674 10.665 36.6972 10.665 38.5C10.665 40.3028 11.3774 42.0326 12.647 43.3125L40.7159 71.3934C41.3479 72.029 42.0998 72.5328 42.928 72.8756C43.7561 73.2184 44.6441 73.3935 45.5404 73.3906ZM45.5404 6.01562C46.4119 6.01803 47.2633 6.2783 47.9871 6.76364C48.711 7.24898 49.2751 7.93769 49.6083 8.74301C49.9415 9.54833 50.0289 10.4342 49.8595 11.2891C49.6902 12.1441 49.2716 12.9297 48.6565 13.5472L24.594 37.6097C24.4813 37.7215 24.3918 37.8546 24.3307 38.0012C24.2696 38.1478 24.2381 38.3051 24.2381 38.4639C24.2381 38.6227 24.2696 38.78 24.3307 38.9266C24.3918 39.0732 24.4813 39.2063 24.594 39.3181L48.6565 63.3806C49.4816 64.2102 49.9447 65.3327 49.9447 66.5027C49.9447 67.6728 49.4816 68.7952 48.6565 69.6249C47.8137 70.4246 46.6962 70.8704 45.5344 70.8704C44.3726 70.8704 43.2551 70.4246 42.4123 69.6249L14.3434 41.6161C13.9338 41.2071 13.6088 40.7214 13.3871 40.1867C13.1654 39.652 13.0513 39.0788 13.0513 38.5C13.0513 37.9212 13.1654 37.348 13.3871 36.8133C13.6088 36.2786 13.9338 35.7929 14.3434 35.3839L42.4123 7.30297C43.245 6.47897 44.3689 6.01642 45.5404 6.01562Z' fill='black'/%3E%3C/svg%3E");
-}
-
-.swiper-slide {
-  background: url(../img/Polygon_2.svg) 0px -10vh no-repeat, url(../img/Polygon_3.svg) 2vw 55vh no-repeat, url(../img/Polygon_4.svg) 80vw 25vh no-repeat;
 }
 
 .main {

@@ -1,6 +1,16 @@
 @import "_header";
 body {
   min-height: 100%;
+  background: url(../img/Polygon_2.svg) 0px 0vh no-repeat, 
+               url(../img/Polygon_3.svg) 2vw 95% no-repeat, 
+               url(../img/Polygon_4.svg) 80vw 27vh no-repeat, 
+               url(../img/disc.svg) 0 50vh no-repeat,
+               url(../img/dots.svg) 0 15vh no-repeat,
+               url(../img/disc-right.svg) 94vw 70% no-repeat,
+               url(../img/dots-circle.svg) 96vw 90% no-repeat;
+}
+main {
+   padding: 33px 0;
 }
 .swiper {
   width: 100%;
@@ -104,9 +114,7 @@ body {
       }
    }
 }
-.swiper-slide {
-   background: url(../img/Polygon_2.svg) 0px -10vh no-repeat, url(../img/Polygon_3.svg) 2vw 55vh no-repeat, url(../img/Polygon_4.svg) 80vw 25vh no-repeat;
-}
+
 .main {
   display: flex;
   padding: 70px 0;

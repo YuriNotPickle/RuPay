@@ -127,13 +127,17 @@ header .nav-menu__buttons_btn svg:hover path {
 }
 header .nav-menu__buttons_btn_container {
   margin-left: 18px;
+  display: flex;
+  flex-direction: column;
+  height: 40px;
+  margin-top: 4px;
 }
 header .nav-menu__buttons_btn_container p {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
-  line-height: 20px;
+  line-height: 1;
   color: #000000;
 }
 
