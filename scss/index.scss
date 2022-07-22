@@ -345,31 +345,31 @@ main {
   }
 }
 .third {
-   padding: 70px 0;
-   min-height: 750px;
-   display: flex;
-   flex-direction: column;
+  padding: 70px 0;
+  min-height: 750px;
+  display: flex;
+  flex-direction: column;
   &__top {
     display: flex;
     &_text {
       display: flex;
       flex-direction: column;
       margin: 40px 0 0 170px;
-      width: 35%;
+      flex: 1;
       justify-content: space-evenly;
       &_heading {
-         font-family: "Montserrat";
-         font-style: normal;
-         font-weight: 600;
-         font-size: 40px;
-         line-height: 1.2;
-         color: #000000;
-         span {
-           color: $blue;
-         }
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 1.2;
+        color: #000000;
+        span {
+          color: $blue;
+        }
       }
       &_paragraph {
-         font-family: "Montserrat";
+        font-family: "Montserrat";
         font-style: normal;
         font-weight: 300;
         font-size: 18px;
@@ -381,6 +381,158 @@ main {
         padding-left: 20px;
         margin-top: 5px;
         border-radius: 2.5px;
+      }
+    }
+    &_image {
+      position: relative;
+      display: flex;
+      flex: 1;
+      justify-content: center;
+      align-items: center;
+      transition: 200ms;
+      &:hover {
+        transform: scale(105%);
+      }
+      &_svg-1 {
+        position: absolute;
+        bottom: -20px;
+        right: 45px;
+      }
+      &_svg-2 {
+        position: absolute;
+        top: 0;
+        left: 20px;
+        z-index: 1;
+      }
+      &_pic {
+        z-index: 2;
+      }
+    }
+  }
+  &__bottom {
+    display: flex;
+    margin: 0 8vw;
+    &_container {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      align-items: flex-start;
+      &:hover {
+         .third__bottom_container_img {
+            top: -10px;
+         }
+      }
+      &.down {
+        margin-top: 60px;
+      }
+      &_img {
+        height: 60px;
+        position: relative;
+        top: 0;
+        transition: top ease 0.2s;
+      }
+      &_p {
+        margin-top: 20px;
+        font-family: "Montserrat";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 1;
+        color: #000000;
+        width: 90%;
+        max-width: 350px;
+        position: relative;
+        padding: 7px;
+        &.border-left-top {
+         border-left: $blue 3px solid;
+         border-top: $blue 3px solid;
+         &::after {
+           content: "";
+           width: 50%;
+           height: 3px;
+           background-color: white;
+           position: absolute;
+           right: 0;
+           top: -3px;
+         }
+         &::before {
+          content: "";
+          height: 50%;
+          width: 3px;
+          background-color: white;
+          position: absolute;
+          right: 0;
+          left: -3px;
+          top: 50%;
+        }
+       }
+       &.border-left-bottom {
+         border-left: $blue 3px solid;
+         border-bottom: $blue 3px solid;
+         &::after {
+            content: "";
+            width: 50%;
+            height: 3px;
+            background-color: white;
+            position: absolute;
+            right: 0;
+            bottom: -3px;
+          }
+          &::before {
+            content: "";
+            height: 50%;
+            width: 3px;
+            background-color: white;
+            position: absolute;
+            right: 0;
+            left: -3px;
+            top: 0;
+         }
+       }
+       &.border-right-top {
+         border-top: $blue 3px solid;
+         border-right: $blue 3px solid;
+         &::after {
+            content: "";
+            width: 50%;
+            height: 3px;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            top: -3px;
+          }
+          &::before {
+            content: "";
+            height: 50%;
+            width: 3px;
+            background-color: white;
+            position: absolute;
+            right: -3px;
+            bottom: 0;
+         }
+       }
+       &.border-right-bottom {
+         border-right: $blue 3px solid;
+         border-bottom: $blue 3px solid;
+         &::after {
+            content: "";
+            width: 50%;
+            height: 3px;
+            background-color: white;
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+          }
+          &::before {
+            content: "";
+            height: 50%;
+            width: 3px;
+            background-color: white;
+            position: absolute;
+            right: -3px;
+            top: 0;
+         }
+       }
       }
     }
   }
