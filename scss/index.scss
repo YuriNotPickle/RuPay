@@ -452,20 +452,20 @@ b {
           &::after {
             content: "";
             width: 50%;
-            height: 3px;
+            height: 6px;
             background-color: white;
             position: absolute;
             right: 0;
-            top: -3px;
+            top: -5px;
           }
           &::before {
             content: "";
             height: 50%;
-            width: 3px;
+            width: 6px;
             background-color: white;
             position: absolute;
             right: 0;
-            left: -3px;
+            left: -5px;
             top: 50%;
           }
         }
@@ -475,20 +475,20 @@ b {
           &::after {
             content: "";
             width: 50%;
-            height: 3px;
+            height: 6px;
             background-color: white;
             position: absolute;
             right: 0;
-            bottom: -3px;
+            bottom: -5px;
           }
           &::before {
             content: "";
             height: 50%;
-            width: 3px;
+            width: 6px;
             background-color: white;
             position: absolute;
             right: 0;
-            left: -3px;
+            left: -5px;
             top: 0;
           }
         }
@@ -498,19 +498,19 @@ b {
           &::after {
             content: "";
             width: 50%;
-            height: 3px;
+            height: 6px;
             background-color: white;
             position: absolute;
             left: 0;
-            top: -3px;
+            top: -5px;
           }
           &::before {
             content: "";
             height: 50%;
-            width: 3px;
+            width: 6px;
             background-color: white;
             position: absolute;
-            right: -3px;
+            right: -5px;
             bottom: 0;
           }
         }
@@ -520,19 +520,19 @@ b {
           &::after {
             content: "";
             width: 50%;
-            height: 3px;
+            height: 6px;
             background-color: white;
             position: absolute;
             left: 0;
-            bottom: -3px;
+            bottom: -5px;
           }
           &::before {
             content: "";
             height: 50%;
-            width: 3px;
+            width: 6px;
             background-color: white;
             position: absolute;
-            right: -3px;
+            right: -5px;
             top: 0;
           }
         }
@@ -577,8 +577,7 @@ b {
     }
   }
   &__middle {
-    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232B60EBFF' stroke-width='3' stroke-dasharray='100 ' stroke-dashoffset='3' stroke-linecap='square'/%3e%3c/svg%3e");
-    display: flex;
+   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232B60EBFF' stroke-width='3' stroke-dasharray='100 ' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");    display: flex;
     margin: 0 8vw;
     padding: 15px;
     &_container {

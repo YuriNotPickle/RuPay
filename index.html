@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@300;600&family=Montserrat:wght@300;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Montserrat+Alternates:wght@300;600&family=Montserrat:wght@300;500&display=swap"
       rel="stylesheet"
     />
     <link href="http://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet" />
@@ -24,19 +24,62 @@
       <div class="nav-menu">
         <ul class="nav-menu__list">
           <li class="nav-menu__list_li">
-            <a href="" class="nav-menu__list_li_link"
+            <a href="/" class="nav-menu__list_li_link"
               ><p class="active">Главная</p></a
             >
           </li>
-          <li class="nav-menu__list_li">
-            <a href="" class="nav-menu__list_li_link"><p>Контакты</p></a>
+          <li class="nav-menu__list_li contact">
+            <a href="javascript:;" class="nav-menu__list_li_link">
+              <p>
+                Контакты
+                <svg
+                  width="18"
+                  height="11"
+                  viewBox="0 0 18 11"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="0.707107"
+                    y1="1.29289"
+                    x2="9.69564"
+                    y2="10.2814"
+                    stroke="#2B60EB"
+                    stroke-width="2"
+                  />
+                  <line
+                    y1="-1"
+                    x2="12.7117"
+                    y2="-1"
+                    transform="matrix(-0.707107 0.707107 0.707107 0.707107 17.9904 2)"
+                    stroke="#2B60EB"
+                    stroke-width="2"
+                  />
+                </svg>
+              </p>
+
+              <div class="nav-menu__list_li_link_contact-dropdown">
+                <a href="" class="nav-menu__list_li_link_contact-dropdown_a">
+                  Telegram</a
+                >
+                <a href="" class="nav-menu__list_li_link_contact-dropdown_a">
+                  YouTube
+                </a>
+                <a href="" class="nav-menu__list_li_link_contact-dropdown_a">
+                  ВКонтакте
+                </a>
+                <a href="" class="nav-menu__list_li_link_contact-dropdown_a">
+                  Тех. Поддержка
+                </a>
+              </div>
+            </a>
           </li>
           <li class="nav-menu__list_li">
             <a href="" class="nav-menu__list_li_link"><p>Маркетплейс</p></a>
           </li>
         </ul>
         <div class="nav-menu__buttons">
-          <button class="nav-menu__buttons_btn">
+          <button class="nav-menu__buttons_btn readress">
             <svg
               width="40"
               height="40"
@@ -55,8 +98,12 @@
                 d="M29 4.53125C24.1605 4.53125 19.4298 5.96632 15.4059 8.65498C11.382 11.3436 8.24582 15.1651 6.39383 19.6362C4.54185 24.1073 4.05729 29.0271 5.00142 33.7736C5.94555 38.5201 8.27598 42.88 11.698 46.302C15.12 49.724 19.4799 52.0545 24.2264 52.9986C28.9729 53.9427 33.8927 53.4582 38.3638 51.6062C42.8349 49.7542 46.6564 46.618 49.345 42.5941C52.0337 38.5702 53.4688 33.8395 53.4688 29C53.4614 22.5128 50.8811 16.2933 46.2939 11.7061C41.7067 7.11896 35.4873 4.53864 29 4.53125ZM29 51.6562C24.519 51.6562 20.1387 50.3275 16.4129 47.838C12.6871 45.3485 9.78316 41.8101 8.06837 37.6702C6.35357 33.5303 5.9049 28.9749 6.77909 24.58C7.65329 20.1851 9.81109 16.1481 12.9796 12.9796C16.1482 9.81108 20.1851 7.65328 24.58 6.77908C28.9749 5.90489 33.5303 6.35356 37.6702 8.06835C41.8101 9.78315 45.3485 12.6871 47.838 16.4129C50.3275 20.1387 51.6563 24.519 51.6563 29C51.6495 35.0067 49.2604 40.7655 45.013 45.0129C40.7655 49.2604 35.0068 51.6495 29 51.6562Z"
               />
             </svg>
+            <div class="readress_dropdown">
+              <a href="" class="readress_dropdown_a">RUpay Wallet.</a>
+              <a href="" class="readress_dropdown_a">RUpay Scan.</a>
+            </div>
           </button>
-          <button class="nav-menu__buttons_btn">
+          <button class="nav-menu__buttons_btn theme">
             <div class="nav-menu__buttons_btn_container">
               <img height="20" src="img/White_theme.svg" alt="" />
               <p>Белая тема</p>

@@ -3,6 +3,7 @@ $blue: #2b60eb;
 $gray: #b9d7ea;
 $pink: #d6d9f2;
 $milky: #f7fbfc;
+
 header {
   padding: 0 50px;
   margin-top: 5px;
@@ -20,9 +21,33 @@ header {
       flex-flow: row nowrap;
       list-style: none;
       &_li {
+        &.contact {
+          display: flex;
+          position: relative;
+        }
+        &.contact:hover {
+          .nav-menu__list_li_link_contact-dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          .nav-menu__list_li_link {
+            p {
+              color: $blue;
+              &::after {
+                width: 100%;
+              }
+              svg {
+                line {
+                  stroke: $blue;
+                }
+              }
+            }
+          }
+        }
         &_link {
           text-decoration: none;
-          p {
+          & > p {
             font-family: "Montserrat";
             font-style: normal;
             font-weight: 600;
@@ -35,11 +60,24 @@ header {
               width: 0px;
               height: 2px;
               display: block;
-              background: #000000;
+              background: $blue;
               transition: 200ms;
             }
             &:hover::after {
               width: 100%;
+            }
+            &:hover {
+              color: $blue;
+              svg {
+                line {
+                  stroke: $blue;
+                }
+              }
+            }
+            svg {
+              line {
+                stroke: #000000;
+              }
             }
           }
           .active {
@@ -54,6 +92,44 @@ header {
             }
             &:hover::after {
               width: 100%;
+            }
+          }
+          &_contact-dropdown {
+            display: none;
+            position: absolute;
+            z-index: 3;
+            padding: 20px 0;
+            background: linear-gradient(
+              180deg,
+              rgba(214, 217, 242, 0.42) 23.27%,
+              rgba(214, 217, 242, 0.6) 84.91%
+            );
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            min-width: 315px;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            &_a {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 1.2;
+              text-align: center;
+              color: #f7fbfc;
+              padding: 10px;
+              background: rgba(43, 96, 235, 0.9);
+              border: 1px solid #2b60eb;
+              border-radius: 150px;
+              min-width: 225px;
+              margin: 15px 0;
+              text-decoration: none;
+              transition: background-color 200ms linear, border 200ms linear;
+              &:hover {
+                background: #000000;
+                border: 1px solid #000000;
+              }
             }
           }
         }
@@ -75,21 +151,13 @@ header {
             fill: black;
             transition: 200ms;
           }
-          &:hover {
-            circle {
-              fill: $blue;
-            }
-            path {
-              fill: white;
-            }
-          }
         }
         &_container {
-         margin-left: 18px;
-         display: flex;
-         flex-direction: column;
-         height: 40px;
-         margin-top: 4px;
+          margin-left: 18px;
+          display: flex;
+          flex-direction: column;
+          height: 40px;
+          margin-top: 4px;
           p {
             font-family: "Montserrat";
             font-style: normal;
@@ -98,6 +166,62 @@ header {
             line-height: 1;
             color: #000000;
           }
+        }
+        &.readress {
+         position: relative;
+         .readress_dropdown {
+            display: none;
+            position: absolute;
+            padding: 20px 0;
+            z-index: 3;
+            background: linear-gradient(
+              180deg,
+              rgba(214, 217, 242, 0.42) 23.27%,
+              rgba(214, 217, 242, 0.6) 84.91%
+            );
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            min-width: 315px;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            &_a {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 1.2;
+              text-align: center;
+              color: #f7fbfc;
+              padding: 10px;
+              background: rgba(43, 96, 235, 0.9);
+              border: 1px solid #2b60eb;
+              border-radius: 150px;
+              min-width: 225px;
+              margin: 15px 0;
+              text-decoration: none;
+              transition: background-color 200ms linear, border 200ms linear;
+              &:hover {
+                background: #000000;
+                border: 1px solid #000000;
+              }
+            }
+         }
+         &:hover {
+               svg {
+                     circle {
+                       fill: $blue;
+                     }
+                     path {
+                       fill: white;
+                     }
+               }
+            .readress_dropdown {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            }
+         }
         }
       }
     }
