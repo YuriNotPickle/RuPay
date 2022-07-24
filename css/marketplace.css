@@ -140,7 +140,7 @@ header .nav-menu__list_li_link_contact-dropdown {
           backdrop-filter: blur(10px);
   border-radius: 30px;
   min-width: 315px;
-  top: 20px;
+  top: 23px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -210,7 +210,7 @@ header .nav-menu__buttons_btn.readress .readress_dropdown {
           backdrop-filter: blur(10px);
   border-radius: 30px;
   min-width: 315px;
-  top: 40px;
+  top: 35px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -247,6 +247,121 @@ header .nav-menu__buttons_btn.readress:hover .readress_dropdown {
   align-items: center;
 }
 
+body {
+  min-height: 100%;
+  background: url(../img/Polygon_2.svg) 0px 0vh no-repeat, url(../img/Polygon_3.svg) 2vw 95% no-repeat, url(../img/Polygon_4.svg) 80vw 27vh no-repeat, url(../img/disc.svg) 0 50vh no-repeat, url(../img/dots.svg) 0 15vh no-repeat, url(../img/disc-right.svg) 95vw 70% no-repeat, url(../img/dots-circle.svg) 97vw 90% no-repeat;
+}
+
+main {
+  padding: 100px 0;
+  min-height: 750px;
+  display: flex;
+  min-height: 910px;
+}
+main .buisness-token {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main .buisness-token__heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  justify-content: center;
+}
+main .buisness-token__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  position: relative;
+}
+main .buisness-token__grid_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(214, 217, 242, 0.42) 23.27%, rgba(214, 217, 242, 0.6) 84.91%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 30px;
+  height: 170px;
+  width: 250px;
+  transition: 200ms;
+}
+main .buisness-token__grid_item:hover {
+  transform: scale(105%);
+}
+main .buisness-token__grid_item:nth-child(odd) {
+  justify-self: end;
+}
+main .buisness-token__grid_item:nth-child(even) {
+  justify-self: start;
+}
+main .buisness-token__grid_dot-circle {
+  position: absolute;
+  right: 9vw;
+  bottom: -2vh;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+main .real-estate-token {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+main .real-estate-token__heading {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+  justify-content: center;
+}
+main .real-estate-token__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 15px;
+  position: relative;
+}
+main .real-estate-token__grid_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(214, 217, 242, 0.42) 23.27%, rgba(214, 217, 242, 0.6) 84.91%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  border-radius: 30px;
+  height: 170px;
+  width: 250px;
+  transition: 200ms;
+}
+main .real-estate-token__grid_item:hover {
+  transform: scale(105%);
+}
+main .real-estate-token__grid_item:nth-child(odd) {
+  justify-self: end;
+}
+main .real-estate-token__grid_item:nth-child(even) {
+  justify-self: start;
+}
+main .real-estate-token__grid_dot-circle {
+  position: absolute;
+  left: 9vw;
+  top: -2vh;
+  z-index: -1;
+}
+
 footer {
   background: url(../img/footer_bg.svg) 0 0/cover no-repeat;
   padding: 80px 0 10px 0;
@@ -260,4 +375,4 @@ footer .footer-txt {
   letter-spacing: -0.005em;
   color: #f7fbfc;
   margin: 0 20px;
-}/*# sourceMappingURL=node.css.map */
+}/*# sourceMappingURL=marketplace.css.map */
