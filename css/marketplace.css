@@ -70,7 +70,7 @@ header .nav-menu__list_li.contact {
   display: flex;
   position: relative;
 }
-header .nav-menu__list_li.contact:hover .nav-menu__list_li_link_contact-dropdown {
+header .nav-menu__list_li.contact:hover .nav-menu__list_li_link_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,21 +130,27 @@ header .nav-menu__list_li_link .active::after {
 header .nav-menu__list_li_link .active:hover::after {
   width: 100%;
 }
-header .nav-menu__list_li_link_contact-dropdown {
+header .nav-menu__list_li_link_container {
   display: none;
   position: absolute;
   z-index: 3;
+  padding-top: 5px;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+header .nav-menu__list_li_link_container_contact-dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 20px 0;
   background: linear-gradient(180deg, rgba(214, 217, 242, 0.42) 23.27%, rgba(214, 217, 242, 0.6) 84.91%);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border-radius: 30px;
   min-width: 315px;
-  top: 23px;
-  left: 50%;
-  transform: translateX(-50%);
 }
-header .nav-menu__list_li_link_contact-dropdown_a {
+header .nav-menu__list_li_link_container_contact-dropdown_a {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -161,7 +167,7 @@ header .nav-menu__list_li_link_contact-dropdown_a {
   text-decoration: none;
   transition: background-color 200ms linear, border 200ms linear;
 }
-header .nav-menu__list_li_link_contact-dropdown_a:hover {
+header .nav-menu__list_li_link_container_contact-dropdown_a:hover {
   background: #000000;
   border: 1px solid #000000;
 }
@@ -200,21 +206,27 @@ header .nav-menu__buttons_btn_container p {
 header .nav-menu__buttons_btn.readress {
   position: relative;
 }
-header .nav-menu__buttons_btn.readress .readress_dropdown {
+header .nav-menu__buttons_btn.readress .readress__container {
   display: none;
   position: absolute;
-  padding: 20px 0;
+  top: 35px;
+  left: 50%;
+  transform: translateX(-50%);
   z-index: 3;
+  padding-top: 5px;
+}
+header .nav-menu__buttons_btn.readress .readress__container_dropdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
   background: linear-gradient(180deg, rgba(214, 217, 242, 0.42) 23.27%, rgba(214, 217, 242, 0.6) 84.91%);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   border-radius: 30px;
   min-width: 315px;
-  top: 35px;
-  left: 50%;
-  transform: translateX(-50%);
 }
-header .nav-menu__buttons_btn.readress .readress_dropdown_a {
+header .nav-menu__buttons_btn.readress .readress__container_dropdown_a {
   font-family: "Inter";
   font-style: normal;
   font-weight: 500;
@@ -226,12 +238,12 @@ header .nav-menu__buttons_btn.readress .readress_dropdown_a {
   background: rgba(43, 96, 235, 0.9);
   border: 1px solid #2b60eb;
   border-radius: 150px;
-  min-width: 225px;
+  width: 225px;
   margin: 15px 0;
   text-decoration: none;
   transition: background-color 200ms linear, border 200ms linear;
 }
-header .nav-menu__buttons_btn.readress .readress_dropdown_a:hover {
+header .nav-menu__buttons_btn.readress .readress__container_dropdown_a:hover {
   background: #000000;
   border: 1px solid #000000;
 }
@@ -241,7 +253,7 @@ header .nav-menu__buttons_btn.readress:hover svg circle {
 header .nav-menu__buttons_btn.readress:hover svg path {
   fill: white;
 }
-header .nav-menu__buttons_btn.readress:hover .readress_dropdown {
+header .nav-menu__buttons_btn.readress:hover .readress__container {
   display: flex;
   flex-direction: column;
   align-items: center;
