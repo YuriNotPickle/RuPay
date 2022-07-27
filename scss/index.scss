@@ -7,6 +7,15 @@ body {
     url(../img/disc.svg) 0 50vh no-repeat, url(../img/dots.svg) 0 15vh no-repeat,
     url(../img/disc-right.svg) 95vw 70% no-repeat,
     url(../img/dots-circle.svg) 97vw 90% no-repeat;
+  @media screen and (max-width: 630px) {
+    background: url(../img/Polygon_2.svg) 0px 0vh no-repeat,
+      url(../img/Polygon_3.svg) 2vw 95% no-repeat,
+      url(../img/Polygon_4.svg) 80vw 27vh no-repeat,
+      url(../img/disc.svg) 0 50vh/35px no-repeat,
+      url(../img/dots.svg) 0 15vh/50px no-repeat,
+      url(../img/disc-right.svg) 95vw 70% no-repeat,
+      url(../img/dots-circle.svg) 90vw 81%/40px no-repeat;
+  }
 }
 main {
   padding: 33px 0;
@@ -117,12 +126,26 @@ b {
       }
     }
   }
+  @media screen and (max-width: 769px) {
+   &-button-next {
+      position: fixed;
+      opacity: 0.6;
+   }
+   &-button-prev {
+      position: fixed;
+      opacity: 0.6;
+   }
+  }
 }
 
-.main {
-  display: flex;
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   padding: 70px 0;
-  min-height: 750px;
+  min-height: 765px;
+  justify-items: center;
+  align-items: center;
   &__text {
     display: flex;
     flex-direction: column;
@@ -190,12 +213,23 @@ b {
         border-radius: 2.5px;
       }
     }
+    @media screen and (max-width: 1200px) {
+      margin: 40px 0 0 115px;
+      &_top {
+        max-width: 350px;
+      }
+      &_bottom {
+        margin-left: 50px;
+        max-width: 350px;
+      }
+    }
   }
   &__img {
     display: flex;
     width: 50%;
     justify-content: center;
     &_container {
+      grid-area: 1/2/3/2;
       display: flex;
       position: relative;
       align-items: center;
@@ -213,14 +247,87 @@ b {
       &_svg-1 {
         position: absolute;
         z-index: 1;
-        left: 50px;
-        top: 40px;
+        left: 55px;
+        top: -75px;
       }
 
       &_svg-2 {
         position: absolute;
-        top: 375px;
-        left: -75px;
+        top: 255px;
+        left: -65px;
+      }
+    }
+    @media screen and (max-width: 1200px) {
+      &_container {
+        &_pic {
+          height: 330px;
+        }
+        &_svg-1 {
+          left: 105px;
+          top: -30px;
+          width: 200px;
+        }
+        &_svg-2 {
+          top: 230px;
+          left: -40px;
+          width: 150px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    &__text {
+      &_top {
+        margin-bottom: 50px;
+        max-width: 500px;
+      }
+      &_bottom {
+        max-width: 500px;
+      }
+    }
+    &__img {
+      &_container {
+        grid-area: auto;
+      }
+    }
+  }
+  @media screen and (max-width: 630px) {
+    &__text {
+      &_top {
+        margin-bottom: 50px;
+        max-width: 300px;
+        &_heading {
+          font-size: 30px;
+        }
+        &_paragraph {
+          font-size: 16px;
+        }
+      }
+      &_bottom {
+        max-width: 300px;
+        margin-left: 0;
+        &_heading {
+          font-size: 30px;
+        }
+        &_paragraph {
+          font-size: 16px;
+        }
+      }
+    }
+    &__img {
+      &_container {
+        grid-area: auto;
+        &_svg-1 {
+          left: 125px;
+          top: -14px;
+          width: 150px;
+        }
+        &_svg-2 {
+         left: -25px;
+         bottom: 0;
+         width: 150px;
+       }
       }
     }
   }
@@ -236,6 +343,7 @@ b {
     margin: 40px 0 0 170px;
     width: 50%;
     justify-content: space-evenly;
+    align-items: center;
     &_top {
       display: flex;
       flex-direction: column;
@@ -269,7 +377,7 @@ b {
     }
     &_links {
       display: flex;
-      width: 80%;
+      width: 100%;
       justify-content: space-evenly;
       &_install {
         display: flex;
@@ -345,6 +453,36 @@ b {
         left: -75px;
       }
     }
+  }
+  @media screen and (max-width: 1250px) {
+   &__text {
+      margin: 40px 0 0 110px;
+      &_links {
+         &_install {
+            padding: 20px;
+         }
+         &_manual {
+            padding: 20px;
+         }
+      }
+   }
+   &__img {
+      &_container {
+         &_pic {
+            height: 350px;
+         }
+         &_svg-1 {
+            left: 115px;
+            top: 105px;
+            width: 200px;
+         }
+         &_svg-2 {
+            top: 360px;
+            left: -40px;
+            width: 170px;
+         }
+      }
+   }
   }
 }
 .third {
@@ -540,6 +678,7 @@ b {
     }
   }
 }
+
 .fourth {
   display: flex;
   flex-direction: column;
@@ -577,7 +716,8 @@ b {
     }
   }
   &__middle {
-   background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232B60EBFF' stroke-width='3' stroke-dasharray='100 ' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");    display: flex;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232B60EBFF' stroke-width='3' stroke-dasharray='100 ' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    display: flex;
     margin: 0 8vw;
     padding: 15px;
     &_container {
@@ -636,6 +776,7 @@ b {
     }
   }
 }
+
 .tokenization-popup {
   position: fixed;
   top: 50%;

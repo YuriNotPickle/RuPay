@@ -11,4 +11,10 @@ footer {
     color: #f7fbfc;
     margin: 0 20px;
   }
+  @media screen and (max-width: 769px) {
+   padding: 160px 0 10px 0;
+   .footer-txt {
+      width: 80%;
+   }
+  }
 }
