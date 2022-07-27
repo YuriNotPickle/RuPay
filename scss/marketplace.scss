@@ -7,11 +7,21 @@ body {
     url(../img/disc.svg) 0 50vh no-repeat, url(../img/dots.svg) 0 15vh no-repeat,
     url(../img/disc-right.svg) 95vw 70% no-repeat,
     url(../img/dots-circle.svg) 97vw 90% no-repeat;
+    @media screen and (max-width: 630px) {
+      background: url(../img/Polygon_2.svg) 0px 0vh no-repeat,
+        url(../img/Polygon_3.svg) 2vw 95% no-repeat,
+        url(../img/Polygon_4.svg) 80vw 27vh no-repeat,
+        url(../img/disc.svg) 0 50vh/35px no-repeat,
+        url(../img/dots.svg) 0 15vh/50px no-repeat,
+        url(../img/disc-right.svg) 95vw 70% no-repeat,
+        url(../img/dots-circle.svg) 90vw 81%/40px no-repeat;
+    }
 }
 main {
   padding: 100px 0;
   min-height: 750px;
   display: flex;
+  flex-wrap: wrap;
   min-height: 910px;
   .buisness-token {
     display: flex;
@@ -121,6 +131,46 @@ main {
          z-index: -1;
       }
     }
+  }
+  @media screen and (max-width: 1029px) {
+   .buisness-token {
+      margin-bottom: 20px;
+      &__heading {
+         margin-bottom: 20px;
+      }
+   }
+   .real-estate-token {
+      &__heading {
+         margin-bottom: 20px;
+      }
+   }
+  }
+  @media screen and (max-width: 580px) {
+   padding: 50px 0;
+   .buisness-token {
+      &__grid {
+         grid-template-columns: 1fr;
+         &_item {
+            justify-self: center !important;
+         }
+      }
+   }
+   .real-estate-token {
+      &__grid {
+         grid-template-columns: 1fr;
+         &_item {
+            justify-self: center !important;
+         }
+      }
+   }
+  }
+  @media screen and (max-width: 470px) {
+   .buisness-token__heading {
+      font-size: 22px;
+   }
+   .real-estate-token__heading {
+      font-size: 22px;
+   }
   }
 }
 @import "_footer";

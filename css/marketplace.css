@@ -278,11 +278,17 @@ body {
   min-height: 100%;
   background: url(../img/Polygon_2.svg) 0px 0vh no-repeat, url(../img/Polygon_3.svg) 2vw 95% no-repeat, url(../img/Polygon_4.svg) 80vw 27vh no-repeat, url(../img/disc.svg) 0 50vh no-repeat, url(../img/dots.svg) 0 15vh no-repeat, url(../img/disc-right.svg) 95vw 70% no-repeat, url(../img/dots-circle.svg) 97vw 90% no-repeat;
 }
+@media screen and (max-width: 630px) {
+  body {
+    background: url(../img/Polygon_2.svg) 0px 0vh no-repeat, url(../img/Polygon_3.svg) 2vw 95% no-repeat, url(../img/Polygon_4.svg) 80vw 27vh no-repeat, url(../img/disc.svg) 0 50vh/35px no-repeat, url(../img/dots.svg) 0 15vh/50px no-repeat, url(../img/disc-right.svg) 95vw 70% no-repeat, url(../img/dots-circle.svg) 90vw 81%/40px no-repeat;
+  }
+}
 
 main {
   padding: 100px 0;
   min-height: 750px;
   display: flex;
+  flex-wrap: wrap;
   min-height: 910px;
 }
 main .buisness-token {
@@ -388,6 +394,42 @@ main .real-estate-token__grid_dot-circle {
   top: -2vh;
   z-index: -1;
 }
+@media screen and (max-width: 1029px) {
+  main .buisness-token {
+    margin-bottom: 20px;
+  }
+  main .buisness-token__heading {
+    margin-bottom: 20px;
+  }
+  main .real-estate-token__heading {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 580px) {
+  main {
+    padding: 50px 0;
+  }
+  main .buisness-token__grid {
+    grid-template-columns: 1fr;
+  }
+  main .buisness-token__grid_item {
+    justify-self: center !important;
+  }
+  main .real-estate-token__grid {
+    grid-template-columns: 1fr;
+  }
+  main .real-estate-token__grid_item {
+    justify-self: center !important;
+  }
+}
+@media screen and (max-width: 470px) {
+  main .buisness-token__heading {
+    font-size: 22px;
+  }
+  main .real-estate-token__heading {
+    font-size: 22px;
+  }
+}
 
 footer {
   background: url(../img/footer_bg.svg) 0 0/cover no-repeat;
@@ -408,6 +450,6 @@ footer .footer-txt {
     padding: 160px 0 10px 0;
   }
   footer .footer-txt {
-    width: 80%;
+    width: 70%;
   }
 }/*# sourceMappingURL=marketplace.css.map */

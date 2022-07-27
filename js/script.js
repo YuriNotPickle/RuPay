@@ -1,6 +1,8 @@
 const swiper = new Swiper(".swiper", {
   // Optional parameters
   direction: "horizontal",
+  autoHeight: true,
+  allowTouchMove: true,
 
   // If we need pagination
   pagination: {
