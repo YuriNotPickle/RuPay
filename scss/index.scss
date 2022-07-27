@@ -127,17 +127,16 @@ b {
     }
   }
   @media screen and (max-width: 769px) {
-   &-button-next {
+    &-button-next {
       position: fixed;
       opacity: 0.6;
-   }
-   &-button-prev {
+    }
+    &-button-prev {
       position: fixed;
       opacity: 0.6;
-   }
+    }
   }
 }
-
 
 .main-grid {
   display: grid;
@@ -147,10 +146,6 @@ b {
   justify-items: center;
   align-items: center;
   &__text {
-    display: flex;
-    flex-direction: column;
-    margin: 40px 0 0 170px;
-    width: 50%;
     &_top {
       display: flex;
       flex-direction: column;
@@ -324,31 +319,32 @@ b {
           width: 150px;
         }
         &_svg-2 {
-         left: -25px;
-         bottom: 0;
-         width: 150px;
-       }
+          left: -25px;
+          bottom: 0;
+          width: 150px;
+        }
       }
     }
   }
 }
 
-.second {
-  display: flex;
+.second-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
   padding: 70px 0;
-  min-height: 750px;
+  min-height: 765px;
   &__text {
-    display: flex;
-    flex-direction: column;
-    margin: 40px 0 0 170px;
-    width: 50%;
-    justify-content: space-evenly;
-    align-items: center;
     &_top {
       display: flex;
       flex-direction: column;
-      max-width: 800px;
+      max-width: 500px;
       width: 85%;
+      margin-bottom: 15px;
+      @media screen and (max-width: 1400px) {
+        justify-self: end;
+      }
       &_heading {
         font-family: "Montserrat";
         font-style: normal;
@@ -376,9 +372,14 @@ b {
       }
     }
     &_links {
+      margin-top: 15px;
       display: flex;
-      width: 100%;
-      justify-content: space-evenly;
+      max-width: 500px;
+      width: 85%;
+      justify-content: space-between;
+      @media screen and (max-width: 1400px) {
+        justify-self: end;
+      }
       &_install {
         display: flex;
         background: #0eb363;
@@ -422,14 +423,12 @@ b {
     }
   }
   &__img {
-    display: flex;
-    width: 50%;
-    justify-content: center;
     &_container {
       display: flex;
       position: relative;
       align-items: center;
       transition: 200ms;
+      grid-area: 1/2/3/2;
       &:hover {
         transform: scale(105%);
       }
@@ -443,61 +442,126 @@ b {
       &_svg-1 {
         position: absolute;
         z-index: 1;
-        left: 50px;
-        top: 40px;
+        right: -115px;
+        top: -60px;
       }
 
       &_svg-2 {
         position: absolute;
-        top: 375px;
-        left: -75px;
+        bottom: -35px;
+        left: -60px;
       }
     }
   }
   @media screen and (max-width: 1250px) {
-   &__text {
+    &__text {
       margin: 40px 0 0 110px;
       &_links {
-         &_install {
-            padding: 20px;
-         }
-         &_manual {
-            padding: 20px;
-         }
+        &_install {
+          padding: 20px;
+        }
+        &_manual {
+          padding: 20px;
+        }
       }
-   }
-   &__img {
+    }
+    &__img {
       &_container {
-         &_pic {
-            height: 350px;
-         }
-         &_svg-1 {
-            left: 115px;
-            top: 105px;
-            width: 200px;
-         }
-         &_svg-2 {
-            top: 360px;
-            left: -40px;
-            width: 170px;
-         }
+        &_pic {
+          height: 350px;
+        }
+        &_svg-1 {
+          right: -55px;
+          top: -25px;
+          width: 200px;
+        }
+        &_svg-2 {
+          bottom: -25px;
+          left: -45px;
+          width: 170px;
+        }
       }
-   }
+    }
+  }
+  &__paragraph-mobile {
+    display: none;
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 1.4;
+    align-items: center;
+    color: #000000;
+    border-left: 3px solid #000000;
+    padding-left: 20px;
+    margin-top: 5px;
+    border-radius: 2.5px;
+    max-width: 500px;
+    width: 85%;
+    margin: 30px 0;
+  }
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    &__text {
+      &_top {
+        justify-self: center;
+        &_heading {
+          margin: 0;
+        }
+        &_paragraph {
+          display: none;
+        }
+      }
+      &_links {
+        justify-self: center;
+      }
+    }
+    &__paragraph-mobile {
+      display: flex;
+    }
+    &__img {
+      &_container {
+        grid-area: auto;
+      }
+    }
+  }
+  @media screen and (max-width: 510px) {
+    &__text {
+      &_links {
+        flex-wrap: wrap;
+        justify-content: center;
+        &_install {
+          margin: 15px 0;
+        }
+        &_manual {
+          margin: 15px 0;
+        }
+      }
+    }
+    &__img {
+      &_container {
+        &_pic {
+          height: 260px;
+        }
+      }
+    }
   }
 }
+
 .third {
   padding: 70px 0;
   min-height: 750px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
   &__top {
-    display: flex;
     &_text {
       display: flex;
       flex-direction: column;
-      margin: 40px 0 0 170px;
       flex: 1;
       justify-content: space-evenly;
+      max-width: 500px;
       &_heading {
         font-family: "Montserrat";
         font-style: normal;
@@ -536,28 +600,35 @@ b {
       }
       &_svg-1 {
         position: absolute;
-        bottom: -20px;
-        right: 45px;
+        bottom: -45px;
+        right: -55px;
+        width: 250px;
       }
       &_svg-2 {
         position: absolute;
-        top: 0;
-        left: 20px;
+        top: -15px;
+        left: -55px;
         z-index: 1;
+        width: 200px;
       }
       &_pic {
+        height: 300px;
         z-index: 2;
+        filter: drop-shadow(-19px -25px 17px rgba(162, 162, 162, 0.12))
+          drop-shadow(17px 9px 17px rgba(162, 162, 162, 0.12));
+        border-radius: 30px;
       }
     }
   }
   &__bottom {
     display: flex;
-    margin: 0 8vw;
+    flex-wrap: wrap;
+    width: 80%;
+    grid-area: 2/1/2/3;
+    justify-content: space-between;
     &_container {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      align-items: flex-start;
+      display: block;
+      flex-basis: 25%;
       &:hover {
         .third__bottom_container_img {
           top: -10px;
@@ -674,6 +745,105 @@ b {
             top: 0;
           }
         }
+      }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    &__top {
+      &_text {
+        max-width: 450px;
+        justify-self: end;
+      }
+      &_image {
+        &_pic {
+          height: 230px;
+        }
+      }
+    }
+    &__bottom {
+      margin-top: 50px;
+      &_container {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+    }
+  }
+  @media screen and (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    &__top {
+      &_image {
+        margin-top: 50px;
+      }
+      &_text {
+        max-width: 500px;
+        justify-self: center;
+      }
+    }
+    &__bottom {
+      grid-area: auto;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    &__bottom {
+      margin-top: 70px;
+      padding: 20px 0;
+      background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%232B60EBFF' stroke-width='5' stroke-dasharray='100 ' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+      &_container {
+        flex-basis: 100%;
+        margin: 10px 0;
+        flex-direction: column;
+        align-items: center;
+        &_p {
+         max-width: unset;
+         width: 90%;
+        }
+        &.down {
+          margin-top: 0;
+        }
+        .border-left-bottom,
+        .border-right-top,
+        .border-right-bottom,
+        .border-left-top {
+          border: 0;
+          &::before {
+            height: 0;
+            width: 0;
+          }
+          &::after {
+            height: 0;
+            width: 0;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 530px) {
+    &__top {
+      &_text {
+         width: 85%;
+      }
+      &_image {
+        &_pic {
+          height: 190px;
+        }
+        &_svg-1 {
+          bottom: -10px;
+          right: -2px;
+          width: 117px;
+        }
+        &_svg-2 {
+          top: 0px;
+          left: -10px;
+          width: 100px;
+        }
+      }
+    }
+    &__bottom {
+      &_container {
+         &_img {
+            height: 50px;
+         }
       }
     }
   }
