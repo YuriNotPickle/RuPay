@@ -1,0 +1,237 @@
+@import _nullstyle
+
+$blue: #2b60eb
+$gray: #b9d7ea
+$pink: #d6d9f2
+$milky: #f7fbfc
+
+header
+  padding: 0 50px
+  margin-top: 5px
+
+  .logo
+    height: 40px
+
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  .nav-menu
+    display: flex
+    align-items: center
+
+    &__list
+      display: flex
+      flex-flow: row nowrap
+      list-style: none
+
+      &_li
+        &.contact
+          display: flex
+          position: relative
+
+        &.contact:hover
+          .nav-menu__list_li_link_container
+            display: flex
+            flex-direction: column
+            align-items: center
+
+          .nav-menu__list_li_link
+            p
+              color: $blue
+
+              &::after
+                width: 100%
+
+              svg
+                line
+                  stroke: $blue
+
+        &_link
+          text-decoration: none
+
+          & > p
+            font-family: "Montserrat"
+            font-style: normal
+            font-weight: 600
+            font-size: 20px
+            line-height: 1
+            color: #000000
+            margin: 0 32px
+            white-space: nowrap
+
+            &::after
+              content: ""
+              width: 0px
+              height: 2px
+              display: block
+              background: $blue
+              transition: 200ms
+
+            &:hover::after
+              width: 100%
+
+            &:hover
+              color: $blue
+
+              svg
+                line
+                  stroke: $blue
+
+            svg
+              line
+                stroke: #000000
+
+          .active
+            color: $blue
+
+            &::after
+              content: ""
+              width: 0px
+              height: 2px
+              display: block
+              background: $blue
+              transition: 200ms
+
+            &:hover::after
+              width: 100%
+
+          &_container
+            display: none
+            position: absolute
+            z-index: 3
+            padding-top: 5px
+            top: 23px
+            left: 50%
+            transform: translateX(-50%)
+
+            &_contact-dropdown
+              display: flex
+              flex-direction: column
+              align-items: center
+              padding: 20px 0
+              background: linear-gradient(180deg, rgba(214, 217, 242, 0.42) 23.27%, rgba(214, 217, 242, 0.6) 84.91%)
+              backdrop-filter: blur(10px)
+              border-radius: 30px
+              min-width: 315px
+
+              &_a
+                font-family: "Inter"
+                font-style: normal
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.2
+                text-align: center
+                color: #f7fbfc
+                padding: 10px
+                background: rgba(43, 96, 235, 0.9)
+                border: 1px solid #2b60eb
+                border-radius: 150px
+                min-width: 225px
+                margin: 15px 0
+                text-decoration: none
+                transition: background-color 200ms linear, border 200ms linear
+
+                &:hover
+                  background: #000000
+                  border: 1px solid #000000
+
+    &__buttons
+      display: flex
+      align-items: center
+
+      &_btn
+        border: 0
+        background: transparent
+        cursor: pointer
+
+        svg
+          circle
+            fill: #ffffff
+            transition: 200ms
+
+          path
+            fill: black
+            transition: 200ms
+
+        &_container
+          margin-left: 18px
+          display: flex
+          flex-direction: column
+          height: 40px
+          margin-top: 4px
+
+          p
+            font-family: "Montserrat"
+            font-style: normal
+            font-weight: 600
+            font-size: 12px
+            line-height: 1
+            color: #000000
+
+        &.readress
+          position: relative
+
+          .readress__container
+            display: none
+            position: absolute
+            top: 35px
+            left: 50%
+            transform: translateX(-50%)
+            z-index: 3
+            padding-top: 5px
+
+            &_dropdown
+              display: flex
+              flex-direction: column
+              align-items: center
+              padding: 20px 0
+              background: linear-gradient(180deg, rgba(214, 217, 242, 0.42) 23.27%, rgba(214, 217, 242, 0.6) 84.91%)
+              backdrop-filter: blur(10px)
+              border-radius: 30px
+              min-width: 315px
+
+              &_a
+                font-family: "Inter"
+                font-style: normal
+                font-weight: 500
+                font-size: 16px
+                line-height: 1.2
+                text-align: center
+                color: #f7fbfc
+                padding: 10px
+                background: rgba(43, 96, 235, 0.9)
+                border: 1px solid #2b60eb
+                border-radius: 150px
+                width: 225px
+                margin: 15px 0
+                text-decoration: none
+                transition: background-color 200ms linear, border 200ms linear
+
+                &:hover
+                  background: #000000
+                  border: 1px solid #000000
+
+          &:hover
+            svg
+              circle
+                fill: $blue
+
+              path
+                fill: white
+
+            .readress__container
+              display: flex
+              flex-direction: column
+              align-items: center
+
+  @media screen and (max-width: 890px)
+    padding: 0 5px
+
+    .nav-menu__list_li_link > p
+      font-size: 18px
+      margin: 0 13px
+
+  @media screen and (max-width: 768px)
+    .nav-menu
+      display: none
