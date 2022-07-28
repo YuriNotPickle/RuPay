@@ -172,5 +172,39 @@ main {
       font-size: 22px;
    }
   }
+  &.dark {
+   background-color: $dark-black;
+   .buisness-token {
+      &__heading {
+         color: #ffffff;
+      }
+      &__grid {
+         &_item {
+            background: linear-gradient(180deg, rgba(57, 62, 70, 0.42) 23.27%, rgba(57, 62, 70, 0.6) 84.91%);
+            z-index: 2;
+         }
+         &_dot-circle {
+            z-index: 1;
+            filter: invert(99%) sepia(3%) saturate(126%) hue-rotate(245deg) brightness(114%) contrast(100%);
+         }
+      }
+   }
+   .real-estate-token {
+      &__heading {
+         color: #ffffff;
+      }
+      &__grid {
+         &_item {
+            background: linear-gradient(180deg, rgba(57, 62, 70, 0.42) 23.27%, rgba(57, 62, 70, 0.6) 84.91%);
+            z-index: 2;
+         }
+         &_dot-circle {
+            z-index: 1;
+            filter: invert(99%) sepia(3%) saturate(126%) hue-rotate(245deg) brightness(114%) contrast(100%);
+         }
+      }
+
+   }
+  }
 }
 @import "_footer";

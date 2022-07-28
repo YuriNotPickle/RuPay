@@ -49,7 +49,7 @@ input {
 
 header {
   padding: 0 50px;
-  margin-top: 5px;
+  padding-top: 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -273,6 +273,84 @@ header .nav-menu__buttons_btn.readress:hover .readress__container {
     display: none;
   }
 }
+header.dark {
+  background-color: #141414;
+}
+header.dark .logo path {
+  fill: white;
+}
+header.dark .logo .ruble {
+  fill: #141414;
+}
+header.dark .nav-menu__list_li_link p {
+  color: #ffffff;
+}
+header.dark .nav-menu__list_li_link p svg line {
+  stroke: #ffffff;
+}
+header.dark .nav-menu__list_li_link p::after {
+  background-color: #00ADB5;
+}
+header.dark .nav-menu__list_li_link p:hover {
+  color: #00ADB5;
+}
+header.dark .nav-menu__list_li_link p:hover svg line {
+  stroke: #00ADB5;
+}
+header.dark .nav-menu__list_li_link .active {
+  color: #00ADB5;
+}
+header.dark .nav-menu__list_li_link .active::after {
+  background-color: #00ADB5;
+}
+header.dark .nav-menu__list_li.contact:hover .nav-menu__list_li_link p {
+  color: #00ADB5;
+}
+header.dark .nav-menu__list_li.contact:hover .nav-menu__list_li_link p svg line {
+  stroke: #00ADB5;
+}
+header.dark .nav-menu__list_li.contact:hover .nav-menu__list_li_link_container_contact-dropdown {
+  background: linear-gradient(180deg, rgba(57, 62, 70, 0.42) 23.27%, rgba(57, 62, 70, 0.6) 84.91%);
+}
+header.dark .nav-menu__list_li.contact:hover .nav-menu__list_li_link_container_contact-dropdown_a {
+  background: #00ADB5;
+  border: #00ADB5 1px solid;
+}
+header.dark .nav-menu__list_li.contact:hover .nav-menu__list_li_link_container_contact-dropdown_a:hover {
+  background: #ffffff;
+  border: #ffffff 1px solid;
+  color: #141414;
+}
+header.dark .nav-menu__buttons_btn.readress svg circle {
+  fill: #141414;
+}
+header.dark .nav-menu__buttons_btn.readress svg path {
+  fill: #ffffff;
+}
+header.dark .nav-menu__buttons_btn.readress:hover svg circle {
+  fill: #00ADB5;
+}
+header.dark .nav-menu__buttons_btn.readress:hover svg path {
+  fill: #141414;
+}
+header.dark .nav-menu__buttons_btn.readress:hover .readress__container_dropdown {
+  background: linear-gradient(180deg, rgba(57, 62, 70, 0.42) 23.27%, rgba(57, 62, 70, 0.6) 84.91%);
+}
+header.dark .nav-menu__buttons_btn.readress:hover .readress__container_dropdown_a {
+  background: #00ADB5;
+  border: #00ADB5 1px solid;
+}
+header.dark .nav-menu__buttons_btn.readress:hover .readress__container_dropdown_a:hover {
+  background: #ffffff;
+  border: #ffffff 1px solid;
+  color: #141414;
+}
+header.dark .nav-menu__buttons_btn.theme img {
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(110deg) brightness(105%) contrast(104%);
+}
+header.dark .nav-menu__buttons_btn.theme p {
+  color: #ffffff;
+}
 
 body {
   min-height: 100%;
@@ -430,6 +508,31 @@ main .real-estate-token__grid_dot-circle {
     font-size: 22px;
   }
 }
+main.dark {
+  background-color: #141414;
+}
+main.dark .buisness-token__heading {
+  color: #ffffff;
+}
+main.dark .buisness-token__grid_item {
+  background: linear-gradient(180deg, rgba(57, 62, 70, 0.42) 23.27%, rgba(57, 62, 70, 0.6) 84.91%);
+  z-index: 2;
+}
+main.dark .buisness-token__grid_dot-circle {
+  z-index: 1;
+  filter: invert(99%) sepia(3%) saturate(126%) hue-rotate(245deg) brightness(114%) contrast(100%);
+}
+main.dark .real-estate-token__heading {
+  color: #ffffff;
+}
+main.dark .real-estate-token__grid_item {
+  background: linear-gradient(180deg, rgba(57, 62, 70, 0.42) 23.27%, rgba(57, 62, 70, 0.6) 84.91%);
+  z-index: 2;
+}
+main.dark .real-estate-token__grid_dot-circle {
+  z-index: 1;
+  filter: invert(99%) sepia(3%) saturate(126%) hue-rotate(245deg) brightness(114%) contrast(100%);
+}
 
 footer {
   background: url(../img/footer_bg.svg) 0 0/cover no-repeat;
@@ -452,4 +555,11 @@ footer .footer-txt {
   footer .footer-txt {
     width: 70%;
   }
+}
+footer.dark {
+  background: url(../img/footer-bg-dark.svg) 0 0/cover no-repeat;
+  background-color: #141414;
+}
+footer.dark .footer-txt {
+  color: #141414;
 }/*# sourceMappingURL=marketplace.css.map */

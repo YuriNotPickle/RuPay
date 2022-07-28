@@ -3,10 +3,14 @@ $blue: #2b60eb;
 $gray: #b9d7ea;
 $pink: #d6d9f2;
 $milky: #f7fbfc;
+$dark-black: #141414;
+$dark-blue: #00ADB5;
+
+$dark-blue-filter: invert(55%) sepia(45%) saturate(5683%) hue-rotate(150deg) brightness(97%) contrast(101%);
 
 header {
   padding: 0 50px;
-  margin-top: 5px;
+  padding-top: 5px;
   .logo {
     height: 40px;
   }
@@ -252,4 +256,113 @@ header {
       display: none;
    }
   }
+  &.dark {
+   background-color: $dark-black;
+   .logo {
+      path {
+         fill: white;
+      }
+      .ruble {
+         fill: $dark-black;
+      }
+   }
+   .nav-menu {
+      &__list_li_link {
+         p {
+            color: #ffffff;
+            svg {
+               line {
+                  stroke: #ffffff;
+               }
+            }
+            &::after {
+               background-color: $dark-blue;
+            }
+            &:hover {
+               color: $dark-blue;
+               svg {
+                  line {
+                     stroke: $dark-blue;
+                  }
+               }
+            }
+         }
+         .active {
+            color: $dark-blue;
+            &::after {
+               background-color: $dark-blue;
+            }
+         }
+      }
+      &__list_li.contact{
+         &:hover {
+            .nav-menu__list_li_link p {
+               color: $dark-blue;
+               svg {
+                  line {
+                     stroke: $dark-blue;
+                  }
+               }
+            }
+            .nav-menu__list_li_link_container_contact-dropdown {
+               background: linear-gradient(180deg, rgba(57, 62, 70, 0.42) 23.27%, rgba(57, 62, 70, 0.6) 84.91%);
+            &_a {
+               background: $dark-blue;
+               border: $dark-blue 1px solid;
+               &:hover {
+                  background: #ffffff;
+                  border: #ffffff 1px solid;
+                  color: $dark-black;
+               }
+            }
+            }
+         }
+      }  
+      &__buttons_btn.readress {
+         svg {
+            circle {
+               fill: $dark-black;
+            }
+            path {
+               fill: #ffffff;
+            }
+         }
+         &:hover {
+            svg {
+               circle {
+                  fill: $dark-blue;
+               }
+               path {
+                  fill: $dark-black;
+               }
+            }
+         }
+         &:hover {
+            .readress__container_dropdown {
+               background: linear-gradient(180deg, rgba(57, 62, 70, 0.42) 23.27%, rgba(57, 62, 70, 0.6) 84.91%);
+               &_a {
+                  background: $dark-blue;
+                  border: $dark-blue 1px solid;
+                  &:hover {
+                     background: #ffffff;
+                     border: #ffffff 1px solid;
+                     color: $dark-black;
+                  }
+               }
+   
+            }
+         }
+      }
+      &__buttons_btn.theme {
+         img {
+            filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(110deg) brightness(105%) contrast(104%);
+         }
+         p {
+            color: #ffffff;
+         }
+      }
+   }
+   
 }
+}
+
